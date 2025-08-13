@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Class</title>
+  <meta charset="UTF-8">
+  <style>
+    /* Navbar styles */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="/CSI_3450/SQLInjection/main/home.html">Home</a>
+    <a href="/CSI_3450/SQLInjection/student/add_student_form.html">Students</a>
+    <a href="/CSI_3450/SQLInjection/instructor/add_instructor_form.html">Instructors</a>
+    <a href="/CSI_3450/SQLInjection/class/join_class.html">Join Class</a>
+    <a href="/CSI_3450/SQLInjection/class/create_class.html">Create Class</a>
+  </nav>
+
+  <h2>Create a New Class</h2>
+
+  <!-- Matches CLASSES(RANK, DAY, TIME, LOCATION, INSTRUCTOR_ID) -->
+  <form action="/CSI_3450/SQLInjection/class/create_class.php" method="POST">
+    <label for="rank">Rank:</label><br>
+<select id="rank" name="rank" required>
+  <option value="">--Select Rank--</option>
+  <option value="Beginner">Beginner</option>
+  <option value="Intermediate">Intermediate</option>
+  <option value="Advanced">Advanced</option>
+</select><br><br>
+
+    <label for="day">Day:</label><br>
+    <select id="day" name="day" required>
+      <option value="">--Select Day--</option>
+      <option>Monday</option>
+      <option>Tuesday</option>
+      <option>Wednesday</option>
+      <option>Thursday</option>
+      <option>Friday</option>
+      <option>Saturday</option>
+      <option>Sunday</option>
+    </select><br><br>
+
+    <label for="time">Time:</label><br>
+    <input type="time" id="time" name="time" required><br><br>
+
+    <label for="location">Location:</label><br>
+    <input type="text" id="location" name="location" required><br><br>
+
+    <label for="instructor_id">Instructor ID:</label><br>
+    <input type="number" id="instructor_id" name="instructor_id" required><br><br>
+
+    <input type="submit" value="Create Class">
+  </form>
+
+</body>
+</html>
