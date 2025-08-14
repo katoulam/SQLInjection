@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Join Class</title>
+  <style>
+
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+  </style>
+</head>
+<body>
+
+
+  <nav>
+    <a href="/CSI_3450/SQLInjection/main/home.html">Home</a>
+    <a href="/CSI_3450/SQLInjection/student/add_student_form.html">Students</a>
+    <a href="/CSI_3450/SQLInjection/instructor/add_instructor_form.html">Instructors</a>
+    <a href="/CSI_3450/SQLInjection/class/join_class.html">Join Class</a>
+    <a href="/CSI_3450/SQLInjection/class/create_class.html">Create Class</a>
+  </nav>
+
+  <h2>Join a Class</h2>
+
+  <form action="/CSI_3450/SQLInjection/class/join_class.php" method="POST">
+    <table>
+      <tr>
+        <td><label for="class_id">Class ID:</label></td>
+        <td><input type="number" id="class_id" name="class_id" required></td>
+      </tr>
+      <tr>
+        <td><label for="stu_id">Student ID:</label></td>
+        <td><input type="number" id="stu_id" name="stu_id" required></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit">Join</button></td>
+      </tr>
+    </table>
+  </form>
+
+</body>
+</html>
