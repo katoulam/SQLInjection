@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Instructor</title>
+  <style>
+    /* Navbar styles */
+    nav {
+      background-color: #333;
+      overflow: hidden;
+    }
+    nav a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background-color: #575757;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="/CSI_3450/SQLInjection/main/home.html">Home</a>
+    <a href="/CSI_3450/SQLInjection/student/add_student_form.html">Students</a>
+    <a href="/CSI_3450/SQLInjection/instructor/add_instructor_form.html">Instructors</a>
+    <a href="/CSI_3450/SQLInjection/class/join_class.html">Join Class</a>
+    <a href="/CSI_3450/SQLInjection/class/create_class.html">Create Class</a>
+  </nav>
+
+  <h2>Add New Instructor</h2>
+  <form action="/CSI_3450/SQLInjection/instructor/add_instructor.php" method="POST">
+    
+    <label for="stu_id">Student ID:</label>
+    <input type="number" id="stu_id" name="stu_id" required><br><br>
+
+    <label for="promotion_date">Promotion Date:</label>
+    <input type="date" id="promotion_date" name="promotion_date" required><br><br>
+
+    <label for="comp_status">Compensation Status:</label>
+    <select id="comp_status" name="comp_status" required>
+      <option value="Volunteer">Volunteer</option>
+      <option value="Paid">Paid</option>
+    </select><br><br>
+
+    <label for="comp_amount">Compensation Amount ($):</label>
+    <input type="number" step="1.00" id="comp_amount" name="comp_amount"><br><br>
+
+    <input type="submit" value="Add Instructor">
+  </form>
+
+</body>
+</html>
